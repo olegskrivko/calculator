@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+.input-text {
+  /* margin-top: 10px; */
+  padding: 5px 10px;
+  width: 100%;
+  height: 50px;
+  /* background-color: rgb(249, 249, 249); */
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: #a7a7a7;
+  /* box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff; */
+}
+.operand-text {
+  /* margin-top: 10px; */
+  padding: 0px 10px;
+  width: 100%;
+  height: 10px;
+  /* background-color: rgb(249, 249, 249); */
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: rgb(93, 185, 43);
+  /* box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff; */
+}
+
+.output-text {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+  /* background-color: rgb(249, 249, 249); */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #a7a7a7;
+  /* box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff; */
+}
+
+.display {
+  border: solid 4px #f7f7f7;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0px 3px 4px #fff, inset 0px 1px 3px #aaa;
+  border-radius: 4px;
+}
+
+.btn-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "btn-c" "btn-()" "btn-%" "btn-/",
+    "btn-7" "btn-8" "btn-9" "btn-*", "btn-4" "btn-5" "btn-6" "btn--",
+    "btn-1" "btn-2" "btn-3" "btn-+", "btn-+/-" "btn-0" "btn-." "btn-=";
+  /* grid-column-gap: 10px;
+  grid-row-gap: 10px; */
+  justify-items: center;
+}
+
+.calculator-white {
+  padding: 20px;
+  height: 600px;
+  width: 400px; /* 60x 4 = 240 + 24margin*/
+  margin: 200px auto;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(249, 249, 249);
+  border-radius: 5px;
+
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+}
+
+.btn {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(55, 150, 205);
+  border: none;
+  color: rgb(248, 248, 248);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 5px rgb(89, 89, 89), -1px -1px 5px rgb(69, 69, 69);
+
+  display: block;
+  background-color: #f7f7f7;
+  /* background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f7f7f7),
+    to(#e7e7e7)
+  ); */
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7);
+  background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7);
+  color: #a7a7a7;
+  /* margin: 36px;
+  width: 144px;
+  height: 144px; */
+  position: relative;
+  text-align: center;
+  /* line-height: 144px; */
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+  /*text-shadow: 1px 1px 1px rgb(44, 127, 190), -1px 1px 1px rgb(152, 80, 80); /*3 d effect*/
+  /* text-shadow: 0.5px 0.5px 1px rgb(44, 127, 190),
+    -0.5px 0.5px 1px rgb(152, 80, 80); */
+  text-shadow: 0.5px 0.5px 1px rgb(80, 80, 81), -0.5px 0.5px 1px rgb(90, 89, 89);
+  transition: ease 0.3s;
+}
+
+.btn-clear,
+.btn-delete {
+  color: rgb(228, 86, 25);
+}
+
+.fa-moon,
+.fa-delete-left,
+.fa-xmark,
+.fa-minus,
+.fa-divide,
+.fa-plus,
+.fa-equals,
+.fa-c,
+.fa-sun,
+.fa-plus-minus {
+  pointer-events: none;
+}
+
+.btn-brackets,
+.btn-divide,
+.btn-multiply,
+.btn-divide,
+.btn-multiply,
+.btn-minus,
+.btn-plus,
+.btn-plus-minus {
+  color: rgb(93, 185, 43);
+}
+
+.btn-equal {
+  background-color: rgb(93, 185, 43);
+}
+
+.clicked {
+  transform: scale(0.97);
+  box-shadow: 0px 2px 4px #aaa, inset 0px 1px 3px #fff;
+}
+
+.calculator-dark {
+  padding: 20px;
+  height: 600px;
+  width: 400px;
+  margin: 200px auto;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+
+  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+}
+
+.swap-btn-icon {
+  display: none;
+}
